@@ -71,7 +71,7 @@ public class ProductController {
 
 	// get products by their price
 	@GetMapping("price")
-	public List<Product> getProductByPrice(@RequestParam String price) {
+	public List<Product> getProductByPrice(@RequestParam Integer price) {
 		List<Product> product = (List<Product>) productrepositorystring.findByPrice(price);
 		return product;
 	}
